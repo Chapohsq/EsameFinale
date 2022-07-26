@@ -1,3 +1,12 @@
+body {
+  padding-left: 5%;
+  padding-top: 3%;
+  padding-right: 5%;
+  padding-bottom: 3%;
+  background: rgb(193, 232, 246);
+  background: linear-gradient(90deg, rgb(246, 193, 238) 0%, rgb(190, 150, 255) 31%, rgb(148, 180, 255) 100%);
+}
+
 .beer{
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
@@ -9,14 +18,32 @@ box-shadow: 2px 9px 14px -3px rgba(0,0,0,0.33), 2px 9px 14px -3px rgba(0,0,0,0.3
 }
 
 .beer-image{
-  height: 10%;
-  width: 10%;
+  height: 12%;
+  width: 12%;
+  padding: 2%;
 }
 
-body {
-  padding-left: 5%;
-  padding-top: 3%;
-  padding-right: 5%;
-  background: rgb(246,246,193);
-background: linear-gradient(90deg, rgba(246,246,193,1) 0%, rgb(230, 150, 255) 31%, rgb(148, 180, 255) 100%);
+html {
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

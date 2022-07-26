@@ -7,6 +7,7 @@ function displayBeers(beers) {
     console.log(beer);
     const beerDiv = document.createElement('div');
     beerDiv.classList.add('card');
+    beerDiv.classList.add('border-warning');
     beerDiv.classList.add('beer');
 
     const beerImage = document.createElement('img');
@@ -38,4 +39,24 @@ function displayBeers(beers) {
     container.appendChild(beerDiv);
 
   }
+  const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+const alert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
+
+  alertPlaceholder.append(wrapper)
+}
+
+const alertTrigger = document.getElementById('liveAlertBtn')
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', () => {
+    alert('Benissimo, hai confermato la tua età!', 'success')
+  })
+}
 }
